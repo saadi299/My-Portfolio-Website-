@@ -34,7 +34,7 @@ html{
 .cta {
 	display: inline-block;
 	padding: 10px 30px;
-	color: crimson;
+	color: white;
 	background-color: transparent;
 	border: 2px solid crimson;
 	font-size: 2rem;
@@ -250,6 +250,11 @@ img {
     text-align: left;
     
 }
+.services-items h2{
+	color: white;
+   
+    
+}
 
 
 
@@ -313,6 +318,7 @@ img {
     font-weight: 300;
     font-size:1.8rem;
     margin-top:10px;
+   
 }
 
 #projects .info p{
@@ -350,3 +356,65 @@ img {
 
 
 /*------------------------Projects  END------------------*/
+
+/*------------------------About------------------*/
+
+#about .about{
+   flex-direction: column-reverse;
+   text-align: center;
+   margin:0 auto;
+   padding: 100px 20px;
+   
+}
+
+#about .col-left{
+    width: 240px;
+    height: 300px;
+}
+#about .col-right {
+    width: 100%;
+}
+
+#about .col-right h2{
+    font-size: 1.8rem;
+    margin-bottom: 10px;
+    letter-spacing: .2rem;
+    font-weight: 500;
+}
+#about .col-right p{
+    margin-bottom: 20px;
+}
+
+#about .col-right .cta{
+    color: black;
+    font-size: 2rem;
+    padding: 10px 20px;
+  
+    margin-bottom: 50px;
+}
+
+#about .col-left .about-img {
+	height: 100%;
+	width: 100%;
+	position: relative;
+    border: 10px solid white;
+    z-index: 1;
+}
+
+#about .col-left .about-img::after{
+    content: '';
+    left: -33px;
+	top: 19px;
+    height: 98%;
+    width: 98%;
+    
+    background-color: white;
+    border:10px solid red;
+    position: absolute;
+    z-index: -1;
+}
+#about .col-left .about-img img{
+    border:10px solid white;
+
+
+/*------------------------About  END------------------*/
