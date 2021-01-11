@@ -6,7 +6,7 @@
 
 p {
 	color: black;
-	font-size: 1.4rem;
+	font-size: 1.2rem;
 	margin-top: 5px;
 	line-height: 2.5rem;
 	font-weight: 300;
@@ -69,6 +69,16 @@ img {
     color: red;
 }
 
+
+.brand h1{
+    font-size: 3rem;
+    text-transform: uppercase;
+    color: white;
+}
+
+.brand span{
+    color:crimson;
+}
 /*------------------------Hero Section ------------------*/
 
 #hero{
@@ -95,6 +105,7 @@ img {
    justify-content: flex-start;
    margin:0 auto;
    padding:0px 70px;
+  
   	
 }
 #hero h1 {
@@ -185,31 +196,25 @@ img {
 /*------------------------Services  Section ------------------*/
 
 #services .services {
-    flex-direction: column;
+	flex-direction: column;
 	text-align: center;
 	max-width: 1500px;
 	margin: 0 auto;
-    padding: 100px 0;
+	padding: 100px 0;
 }
-
-#services .services-top{
-    max-width: 500px;
-    margin: 0 auto;
-
+#services .service-top {
+	max-width: 500px;
+	margin: 0 auto;
 }
-
-#services .services-bottom{
-    display: flex;
-	align-items: left;
+#services .service-bottom {
+	display: flex;
+	align-items: center;
 	justify-content: center;
 	flex-wrap: wrap;
-    margin-top: 50px;
-    
-   
+	margin-top: 50px;
 }
-
-.services-items{
-    flex-basis: 50%;
+#services .service-item {
+	flex-basis: 80%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -218,17 +223,13 @@ img {
 	border-radius: 10px;
 	background-image: url(./img/img-1.png);
 	background-size: cover;
-	margin: 10px 2%;
+	margin: 10px 5%;
 	position: relative;
 	z-index: 1;
-    overflow: hidden;
-   
-    
-   
+	overflow: hidden;
 }
-
-.services-items::after{
-    content: '';
+#services .service-item::after {
+	content: '';
 	position: absolute;
 	left: 0;
 	top: 0;
@@ -237,28 +238,22 @@ img {
 	background-image: linear-gradient(60deg, #29323c 0%, #485563 100%);
 	opacity: .9;
 	z-index: -1;
-   
 }
 #services .service-bottom .icon {
 	height: 80px;
 	width: 80px;
 	margin-bottom: 20px;
 }
-
-.services-items p{
+#services .service-item h2 {
+	font-size: 2rem;
 	color: white;
-    text-align: left;
-    
+	margin-bottom: 10px;
+	text-transform: uppercase;
 }
-.services-items h2{
+#services .service-item p {
 	color: white;
-   
-    
+	text-align: left;
 }
-
-
-
-
 
 
 /*------------------------Services  End ------------------*/
@@ -274,6 +269,7 @@ img {
    max-width: 1200px;
    margin: 0 auto;
    padding: 100px 0; 
+   
 }
 
 #projects .all-projects
@@ -315,7 +311,7 @@ img {
 }
 
 #projects .info h2{
-    font-weight: 300;
+    font-weight: 500;
     font-size:1.8rem;
     margin-top:10px;
    
@@ -378,11 +374,12 @@ img {
 #about .col-right h2{
     font-size: 1.8rem;
     margin-bottom: 10px;
-    letter-spacing: .2rem;
+    letter-spacing: .1rem;
     font-weight: 500;
 }
 #about .col-right p{
     margin-bottom: 20px;
+  
 }
 
 #about .col-right .cta{
@@ -415,6 +412,255 @@ img {
 }
 #about .col-left .about-img img{
     border:10px solid white;
+}
 
 
 /*------------------------About  END------------------*/
+
+
+/*------------------------Contact Section------------------*/
+
+#contact .contact {
+	flex-direction: column;
+	max-width: 1200px;
+    margin: 0 auto;
+    padding-top:100px;
+}
+#contact .contact-items {
+	width: 400px;
+}
+#contact .contact-item {
+	width: 80%;
+	padding: 20px;
+	text-align: center;
+	border-radius: 10px;
+	padding: 30px;
+	margin: 30px;
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	flex-direction: column;
+	box-shadow: 0px 0px 18px 0 #0000002c;
+	transition: .3s ease box-shadow;
+}
+#contact .contact-item:hover {
+	box-shadow: 0px 0px 5px 0 #0000002c;
+}
+#contact .icon {
+	width: 70px;
+	margin: 0 auto;
+	margin-bottom: 10px;
+}
+#contact .contact-info h1 {
+	font-size: 2.5rem;
+	font-weight: 500;
+	margin-bottom: 5px;
+}
+#contact .contact-info h2 {
+	font-size: 1.3rem;
+	line-height: 2rem;
+	font-weight: 500;
+}
+
+/*------------------------Contact Section End------------------*/
+
+
+/*------------------------Footer------------------*/
+
+#footer{
+    background-image:linear-gradient(60deg, #29323c 0%, #485563 100%);
+}
+#footer .footer{
+    min-height: 200px;
+    flex-direction: column;
+    padding: 30px;
+    
+}
+
+#footer h2{
+    color:white;
+    font-weight: 500;
+    font-size: 1.8rem;
+    letter-spacing: .1rem;
+    margin-top: 10px;
+    margin-bottom: 20px;
+}
+
+#footer .social-icon{
+    display: flex;
+    margin-bottom: 30px;
+}
+
+#footer .social-item{
+    height:50px;
+    width:50px;
+    margin-bottom: 0 5px;
+  
+  
+}
+
+#footer .social-item:hover{
+   width: 65px;
+    
+}
+
+#footer .social-item img{
+    filter:grayscale(1);
+}
+
+#footer .social-item:hover img{
+    filter:grayscale(0);
+}
+
+
+
+#footer p{
+    color: white;
+    font-size: 1rem;
+}
+
+
+
+/*------------------------Footer  END------------------*/
+
+
+
+
+
+
+/*-----------------Media Quary for  Tablet------------------*/
+
+@media only screen and (min-width:760px){
+
+    .cta{
+        font-size:2.5rem;
+        
+    }
+
+    h1 .section-title{
+        font-size:6rem;
+    }
+
+
+/*Hero Section (760px)*/
+#hero h1{
+    font-size:6rem;
+}
+
+/*Hero Section (760px) END*/
+
+
+/*Service Section (760px) */
+#services .service-bottom .service-item{
+    flex-basis:45%;
+    margin:2%;
+}
+
+
+/*Service Section (760px) END*/
+
+
+/*Project Section (760px) */
+#projects .project-item{
+    height:400px;
+    margin:0;
+    width:100%;
+    border-radius: 0;
+}
+
+#projects .all-projects .info{
+    height:100%;
+
+}
+
+#projects .all-projects .project-image{
+    height: 100%;
+}
+
+#projects .project-item{
+    flex-direction: row;
+}
+
+#projects .project-item:nth-child(even){
+    flex-direction: row-reverse;
+}
+
+
+/*Project Section (760px) END*/
+
+
+/*About Section (760px) */
+
+#about .about{
+    flex-direction: row;
+    
+}
+
+#about .col-left{
+    width: 600px;
+    height: 400px;
+    padding-left: 60px;
+}
+
+#about .col-left .about-img::after{
+    left:-45px;
+    top:34px;
+    height:98%;
+    width:98%;
+    border:10px solid crimson;
+
+
+}
+
+#about .col-right{
+    text-align: left;
+    padding: 20px;
+}
+
+#about .col-right h1{
+    text-align: left;
+}
+
+/*About Section (760px) END*/
+
+
+/*Contact Section (760px) */
+
+#contact .contact {
+    flex-direction: column;
+    padding: 100px 0;
+    align-items: center;
+    justify-content: center;
+    min-width:20vh;
+
+}
+
+#contact .contact-items{
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    margin:0;
+    padding: 20px;
+}
+
+#contact .contact-item{
+    margin:20px;
+    flex-direction: row;
+}
+
+#contact .contact-item .icon{
+    height: 100px;
+    width: 100px;
+}
+#contact .contact-item .icon img{
+    object-fit: contain;
+}
+/*Contact Section (760px) END*/
+
+
+
+
+
+}
+
+/*-----------------Media Quary for  Tablet   End------------------*/
