@@ -89,7 +89,7 @@ img {
     z-index:1000;
     left:0;
     top:0;
-    width:100vh;
+    width:100vw;
     height:auto;
 }
 
@@ -114,7 +114,7 @@ img {
     background-color:rgb(31,30,30);
     width:100vw;
     height:100vh;
-    left:0;
+    left:100%;
     top:0;
     display: flex;
     flex-direction: column;
@@ -122,7 +122,14 @@ img {
     justify-content: center;
     z-index: 1;
     overflow-x: hidden;
+    transition: .9s ease left;
 }
+
+#header .nav-list ul.active{
+    left:0%;
+}
+
+
 
 #header .nav-list ul a{
     font-size:2.5rem;
@@ -137,6 +144,7 @@ img {
 
 #header .nav-list ul a::after{
     content:attr(data-after);
+    
     position:absolute;
     top:50%;
     left:50%;
@@ -148,15 +156,98 @@ img {
     transition: .3s ease letter-spacing;
 }
 
+#header .nav-list ul a:hover{
+    color: crimson;
+}
+
 #header .nav-list ul li:hover a::after{
     transform:translate(-50%,-50%) scale(1);
     letter-spacing: initial;
+    
+    
 
 }
+
+
 
 #header .hamburger{
     height: 60px;
+    width:60px;
+    display:inline-block;
+    border:3px solid white;
+    border-radius: 50%;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 100;
+    cursor: pointer;
+    transform:scale(.7);
+    margin-right: 20px;
+   
+    
 }
+
+#header .hamburger::after{
+    content: '';
+    position:absolute;
+    height: 100%;
+    width: 100%;
+    border-radius: 50%;
+    border:3px solid white;
+    animation: hamburger-pulse 1s ease infinite;
+}
+
+@keyframes hamburger-pulse{
+    0%{
+        opacity:1;
+        transform:scale(1);
+    }
+    100%{
+        opacity: 0;
+        transform: scale(1.4);
+    }
+}
+
+#header .hamburger .bar{
+    height: 2px;
+    width:30px;
+    position: relative;
+    background-color: white;
+    z-index: -1;
+}
+
+#header .hamburger .bar::after,
+#header .hamburger .bar::before{
+    content: '';
+    position: absolute;
+    height: 100%;
+    width: 100%;
+    left:0;
+    background-color: white;
+    transition: .3s ease;
+    transition-property: top,bottom;
+}
+
+#header .hamburger .bar::after{
+    top:8px;
+}
+
+#header .hamburger .bar::before{
+    bottom:8px;
+}
+
+#header .hamburger.active .bar::after{
+    top:0px;
+}
+
+#header .hamburger.active .bar::before{
+    bottom:0px;
+}
+
+
+
+
 
 
 
@@ -764,6 +855,11 @@ img {
     #services .service-bottom .service-item{
         flex-basis:22%;
         margin:1.5%;
+    }
+
+
+    #hero h1{
+        font-size:8rem;
     }
 }
 /*-----------------Media Quary for  Desktop (1200 px) END------------------*/
