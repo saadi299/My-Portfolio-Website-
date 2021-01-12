@@ -79,6 +79,92 @@ img {
 .brand span{
     color:crimson;
 }
+
+
+/*------------------------Header  Section ------------------*/
+
+#header 
+{
+    position:fixed;
+    z-index:1000;
+    left:0;
+    top:0;
+    width:100vh;
+    height:auto;
+}
+
+#header .header{
+    min-height: 8vh;
+    background-color: rgba(31,30,30,0.24);
+}
+
+#header .nav-bar{
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    width: 100%;
+    height: 100%;
+    max-width:1300px;
+    padding: 0 10px;
+}
+
+#header .nav-list ul {
+    list-style: none;
+    position: absolute;;
+    background-color:rgb(31,30,30);
+    width:100vw;
+    height:100vh;
+    left:0;
+    top:0;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    z-index: 1;
+    overflow-x: hidden;
+}
+
+#header .nav-list ul a{
+    font-size:2.5rem;
+    font-weight:500;
+    letter-spacing: .2rem;
+    text-decoration: none;
+    color: white;
+    text-transform: uppercase;
+    padding: 20px;
+    display: block;
+}
+
+#header .nav-list ul a::after{
+    content:attr(data-after);
+    position:absolute;
+    top:50%;
+    left:50%;
+    transform:translate(-50%,-50%) scale(0);
+    color: rgba(240,248,255,0.021);
+    font-size: 14rem;
+    letter-spacing:10rem;
+    z-index: -1;
+    transition: .3s ease letter-spacing;
+}
+
+#header .nav-list ul li:hover a::after{
+    transform:translate(-50%,-50%) scale(1);
+    letter-spacing: initial;
+
+}
+
+#header .hamburger{
+    height: 60px;
+}
+
+
+
+
+
+
+
+/*------------------------Header  Section End ------------------*/
 /*------------------------Hero Section ------------------*/
 
 #hero{
@@ -423,8 +509,7 @@ img {
 #contact .contact {
 	flex-direction: column;
 	max-width: 1200px;
-    margin: 0 auto;
-    padding-top:100px;
+	margin: 0 auto;
 }
 #contact .contact-items {
 	width: 400px;
@@ -528,7 +613,7 @@ img {
 
 
 
-/*-----------------Media Quary for  Tablet------------------*/
+/*-----------------Media Quary for  Tablet (760 px)------------------*/
 
 @media only screen and (min-width:760px){
 
@@ -655,12 +740,30 @@ img {
 #contact .contact-item .icon img{
     object-fit: contain;
 }
+
+#contact .contact-info{
+    width:100%;
+    text-align: left;
+    padding-left: 20px;
+}
+
 /*Contact Section (760px) END*/
-
-
 
 
 
 }
 
 /*-----------------Media Quary for  Tablet   End------------------*/
+
+
+
+/*-----------------Media Quary for  Desktop (1200 px)------------------*/
+
+
+@media only screen and (min-width:1200px){
+    #services .service-bottom .service-item{
+        flex-basis:22%;
+        margin:1.5%;
+    }
+}
+/*-----------------Media Quary for  Desktop (1200 px) END------------------*/
