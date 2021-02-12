@@ -200,12 +200,14 @@ p {
 
 /* Hero Section */
 #hero {
-	background-image: url(./img/hero-bg.png);
+	background-image: url(./img/hero-bg6.jpg);
+	background-position:center;
+	background-repeat: no-repeat;
 	background-size: cover;
-	background-position: top center;
-	position: relative;
-	z-index: 1;
 }
+
+
+/*
 #hero::after {
 	content: '';
 	position: absolute;
@@ -217,6 +219,7 @@ p {
 	opacity: .7;
 	z-index: -1;
 }
+*/
 #hero .hero {
 	max-width: 1200px;
 	margin: 0 auto;
@@ -284,7 +287,7 @@ p {
 	margin-top: 50px;
 }
 #services .service-item {
-	flex-basis: 80%;
+	flex-basis: 50%;
 	display: flex;
 	align-items: flex-start;
 	justify-content: center;
@@ -318,7 +321,6 @@ p {
 	font-size: 2rem;
 	color: white;
 	margin-bottom: 10px;
-	text-transform: uppercase;
 }
 #services .service-item p {
 	color: white;
@@ -374,13 +376,26 @@ p {
 }
 #projects .project-info p {
 	color: white;
+	font-size: 1.3rem;
 }
+
+#projects .project-info a {
+	
+	text-decoration: none;
+	color:white;
+	font-size: 2rem;
+	font-weight: 500;
+}
+
+
 #projects .project-img {
 	flex-basis: 50%;
 	height: 300px;
 	overflow: hidden;
 	position: relative;
 }
+
+
 #projects .project-img:after {
 	content: '';
 	position: absolute;
@@ -393,19 +408,25 @@ p {
 }
 #projects .project-img img {
 	transition: .3s ease transform;
+	height: 100%;
+	width: 440px;
+	object-fit: cover;		
 }
+
 #projects .project-item:hover .project-img img {
 	transform: scale(1.1);
 }
 /* End Projects section */
 
 /* About Section */
+
 #about .about {
 	flex-direction: column-reverse;
 	text-align: center;
 	max-width: 1200px;
 	margin: 0 auto;
 	padding: 100px 20px;
+	
 }
 #about .col-left {
 	width: 250px;
@@ -422,6 +443,7 @@ p {
 }
 #about .col-right p {
 	margin-bottom: 20px;
+	color: gray;
 }
 #about .col-right .cta {
 	color: black;
@@ -520,9 +542,13 @@ p {
 #footer .social-item img {
 	filter: grayscale(1);
 	transition: .3s ease filter;
+	transition: .3s ease transform;
+	transform: scale(1);
+
 }
 #footer .social-item:hover img {
 	filter: grayscale(0);
+	transform: scale(1.2);
 }
 #footer p {
 	color: white;
@@ -590,6 +616,7 @@ p {
 	/* Project */
 	#projects .project-item {
 		flex-direction: row;
+		overflow: hidden;
 	}
 	#projects .project-item:nth-child(even) {
 		flex-direction: row-reverse;
@@ -599,6 +626,7 @@ p {
 		margin: 0;
 		width: 100%;
 		border-radius: 0;
+		overflow: hidden;
 	}
 	#projects .all-projects .project-info {
 		height: 100%;
@@ -606,6 +634,9 @@ p {
 	#projects .all-projects .project-img {
 		height: 100%;
 	}
+     
+
+	
 	/* End Project */
 
 	/* About */
@@ -693,9 +724,72 @@ p {
 	}
 	/* End header */
 
-	#services .service-bottom .service-item {
-		flex-basis: 22%;
-		margin: 1.5%;
+	#services .service-bottom{
+		height: 300px;
+		overflow: hidden;
+		
+		
 	}
+
+	#services .service-bottom .service-item {
+		flex-basis:  22%;
+		margin: 1%;
+		height: 100%;
+		display: flex;
+		border-radius: 5%;
+		z-index: 3;
+		
+		
+	}
+
+	#services .services {
+		flex-direction: column;
+		text-align:start;	
+		
+	}
+
+
+
+	#services .service-bottom {
+		align-items: center;
+		justify-content: center;
+		flex-wrap: wrap;
+		margin-top: 50px;
+		z-index: 2;
+		
+		margin-bottom: 100px;
+	}
+
+	#services .service-bottom .icon {
+	position: absolute;
+	top:10px;
+	left:15px;
+	}
+
+
+
+	/*
+#services .service-bottom {
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-wrap: wrap;
+	margin-top: 50px;
+}
+#services .service-item {
+	flex-basis: 50%;
+	display: flex;
+	align-items: flex-start;
+	justify-content: center;
+	flex-direction: column;
+	padding: 30px;
+	border-radius: 10px;
+	background-image: url(./img/img-1.png);
+	background-size: cover;
+	margin: 10px 5%;
+	position: relative;
+	z-index: 1;
+	overflow: hidden;
+}*/
 }
 /* End  Media Query For Desktop */
